@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/home.html"
+    },
+    {
+      "src": "/puzzle-night",
+      "dest": "/puzzle-night.html"
+    },
+    {
+      "src": "/dpotd",
+      "dest": "/dpotd.html"
+    },
+    {
+      "src": "/dtmt",
+      "dest": "/dtmt.html"
+    },
+    {
+      "src": "/team",
+      "dest": "/team.html"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/home.html"
+    }
+  ]
+}
