@@ -74,6 +74,21 @@ body.dark-mode .event-date {
     border-color: #555;
 }
 
+body.dark-mode .hero-content {
+    background-color: rgba(45, 45, 45, 0.95);
+}
+
+body.dark-mode .hero-subtext,
+body.dark-mode .hero-welcome {
+    color: #e0e0e0;
+}
+
+body.dark-mode .event-card {
+    background: #2d2d2d !important;
+    border-color: #444 !important;
+    color: #e0e0e0 !important;
+}
+
 /* ===============================
    GLOBAL LAYOUT ADJUSTMENTS
 =============================== */
