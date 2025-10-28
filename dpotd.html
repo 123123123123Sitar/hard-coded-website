@@ -1,232 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D.Tech Problem of the Day Challenge</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            color: #222;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #e0e0e0;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .logo-text {
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-        nav a.active {
-            color: #0077cc;
-        }
-
-        .dark-mode-toggle {
-            background: none;
-            border: none;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Main layout container */
-        main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        section {
-            margin-bottom: 60px;
-        }
-
-        h1, h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        p {
-            text-align: justify;
-            margin-bottom: 20px;
-        }
-
-        .hero-image img {
-            display: block;
-            margin: 30px auto;
-            width: 60%;
-            max-width: 400px;
-            height: auto;
-        }
-
-        .register-card {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .register-image img {
-            width: 80px;
-            height: 80px;
-            object-fit: contain;
-        }
-
-        .register-info {
-            max-width: 500px;
-        }
-
-        .event-title {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
-
-        .details-btn {
-            background-color: #0077cc;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-        }
-
-        footer {
-            background-color: #e0e0e0;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .footer-logo img {
-            width: 90px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-
-        .footer-contact, .footer-address, .footer-links {
-            margin-top: 10px;
-        }
-
-        .footer-links a {
-            display: block;
-            color: #333;
-            text-decoration: none;
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.Tech Problem of the Day Challenge</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="logo" style="display:none;"></div>
-            <div class="logo-text">D.Tech Math Club</div>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="puzzle-night.html">Puzzle Night</a>
-            <a href="dpotd.html" class="active">d.PotD</a>
-            <a href="dtmt.html">DTMT</a>
-            <a href="team.html">Our Team</a>
-            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="logo" style="display:none;"></div>
+      <div class="logo-text">D.Tech Math Club</div>
+    </div>
 
-    <main>
-        <section class="hero-section">
-            <h1>D.Tech Problem of the Day Challenge</h1>
-            <p>
-                The D.Tech Math Club hosts an online Problems of the Day Challenge, <strong>d.PotD</strong>, for middle school students in the week before <strong>DTMT</strong>. Over five days, students receive three problems each day, including one proof-based question, and have two hours to solve them. Spanning multiple subjects, including algebra, geometry, number theory, and combinatorics, the problems are designed to challenge students' reasoning skills and expose them to a broad range of mathematical ideas. This serves as a lead-up to our main competition and promotes creative problem-solving and proof-based mathematical communication skills.
-            </p>
-            <div class="hero-image">
-                <img src="dpotd-logo.png" alt="D.Tech Problem of the Day Challenge Logo" onerror="this.style.display='none';">
-            </div>
-        </section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="puzzle-night.html">Puzzle Night</a>
+      <a href="dpotd.html" class="active">d.PotD</a>
+      <a href="dtmt.html">DTMT</a>
+      <a href="team.html">Our Team</a>
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
 
-        <section class="register-section">
-            <h2>2026 D.PotD Date and Time TBD</h2>
-            <div class="register-card">
-                <div class="register-image">
-                    <img src="dpotd-icon.png" alt="d.PotD" onerror="this.parentElement.style.background='#ddd';">
-                </div>
-                <div class="register-info">
-                    <div class="event-title">Week in March before DTMT</div>
-                    <div class="event-title">D.Tech Problem of the Day Challenge (D.PotD) / Online in our website's D.PotD portal.</div>
-                </div>
-                <a href="dpotd-details.html" class="details-btn">Details</a>
-            </div>
-            <p>
-                This competition is <strong>open to all middle school students across the US</strong>, and prizes will be distributed online. Winners will also receive name recognition at DTMT. More information about registration, online access, and scheduling will be published closer to the competition date. Stay tuned!
-            </p>
-        </section>
-    </main>
+  <main class="page-content">
+    <section class="hero-section">
+      <h1>D.Tech Problem of the Day Challenge</h1>
+      <p>
+        The D.Tech Math Club hosts an online Problems of the Day Challenge, <strong>d.PotD</strong>,
+        for middle school students in the week before <strong>DTMT</strong>. Over five days,
+        students receive three problems each day, including one proof-based question, and have two
+        hours to solve them. Spanning multiple subjects such as algebra, geometry, number theory,
+        and combinatorics, these problems challenge reasoning and proof-writing skills while
+        serving as a warm-up to DTMT.
+      </p>
 
-    <footer>
-        <div class="footer-logo">
-            <img src="hero-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="logo" style="display:none;"></div>
-        </div>
-        <div class="footer-contact">
-            <p>dtechmathclub@gmail.com</p>
-            <p>designtechhighschool.org</p>
-        </div>
-        <div class="footer-address">
-            <p>275 Oracle Pkwy,</p>
-            <p>Redwood City, CA</p>
-            <p>94065, USA</p>
-        </div>
-        <div class="footer-links">
-            <a href="index.html#competitions">Competitions</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact Us</a>
-        </div>
-    </footer>
+      <div class="hero-image">
+        <img src="dpotd-logo.png" alt="D.PotD Logo" onerror="this.style.display='none';">
+      </div>
+    </section>
 
-    <script src="dark-mode.js"></script>
+    <section class="register-section">
+      <h2>2026 D.PotD Date and Time TBD</h2>
+      <div class="register-card">
+        <div class="register-image">
+          <img src="dpotd-icon.png" alt="d.PotD icon" onerror="this.parentElement.style.background='#ddd';">
+        </div>
+        <div class="register-info">
+          <div class="event-title">Week in March before DTMT</div>
+          <div class="event-title">
+            D.Tech Problem of the Day Challenge (D.PotD) — Online on our competition portal
+          </div>
+        </div>
+        <a href="dpotd-details.html" class="details-btn">Details</a>
+      </div>
+
+      <p>
+        The competition is <strong>open to all middle school students across the US</strong>.
+        Prizes will be awarded online, and winners recognized at DTMT. More information about
+        registration, access, and scheduling will be posted closer to the event — stay tuned!
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="hero-logo.png" alt="D.Tech Math Club Logo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="logo" style="display:none;"></div>
+    </div>
+    <div class="footer-contact">
+      <p>dtechmathclub@gmail.com</p>
+      <p>designtechhighschool.org</p>
+    </div>
+    <div class="footer-address">
+      <p>275 Oracle Pkwy,</p>
+      <p>Redwood City, CA</p>
+      <p>94065, USA</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#competitions">Competitions</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </footer>
+
+  <script src="dark-mode.js"></script>
 </body>
 </html>
