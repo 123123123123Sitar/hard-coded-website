@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D.Tech Math Club - Home</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -31,33 +27,13 @@
             gap: 15px;
         }
 
-        .logo {
+        /* Pure image logo (no placeholder) */
+        .logo-img {
             width: 90px;
             height: 90px;
-            background-color: #E87352;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .logo::before {
-            content: 'π';
-            font-size: 40px;
-            font-weight: bold;
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .logo img {
-            width: 100%;
-            height: 100%;
             object-fit: contain;
             border-radius: 10px;
+            display: block;
         }
 
         .logo-text {
@@ -66,10 +42,7 @@
             color: #000;
         }
 
-        nav {
-            display: flex;
-            gap: 10px;
-        }
+        nav { display: flex; gap: 10px; }
 
         nav a {
             padding: 15px 30px;
@@ -81,13 +54,8 @@
             transition: background-color 0.3s;
         }
 
-        nav a:hover {
-            background-color: #d5634a;
-        }
-
-        nav a.active {
-            background-color: #d5634a;
-        }
+        nav a:hover,
+        nav a.active { background-color: #d5634a; }
 
         /* Hero Section */
         .hero {
@@ -131,9 +99,7 @@
             z-index: 10;
         }
 
-        .hero-logo {
-            margin-bottom: 20px;
-        }
+        .hero-logo { margin-bottom: 20px; }
 
         .hero-logo-text {
             font-size: 36px;
@@ -142,11 +108,7 @@
             margin-bottom: 5px;
         }
 
-        .hero-subtext {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 30px;
-        }
+        .hero-subtext { font-size: 16px; color: #333; margin-bottom: 30px; }
 
         .hero-welcome {
             font-size: 18px;
@@ -167,10 +129,7 @@
             transition: all 0.3s;
         }
 
-        .register-btn:hover {
-            background-color: #E87352;
-            color: white;
-        }
+        .register-btn:hover { background-color: #E87352; color: white; }
 
         /* About Us Section */
         .about-section {
@@ -179,17 +138,8 @@
             background-color: #f5f5f5;
         }
 
-        .about-section h2 {
-            font-size: 56px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .about-section .subtitle {
-            font-size: 22px;
-            color: #333;
-            margin-bottom: 60px;
-        }
+        .about-section h2 { font-size: 56px; font-weight: bold; margin-bottom: 20px; }
+        .about-section .subtitle { font-size: 22px; color: #333; margin-bottom: 60px; }
 
         .stats-container {
             display: flex;
@@ -211,18 +161,8 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
-        .stat-number {
-            font-size: 72px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            font-size: 20px;
-            font-weight: bold;
-            text-align: center;
-            line-height: 1.2;
-        }
+        .stat-number { font-size: 72px; font-weight: bold; margin-bottom: 10px; }
+        .stat-label { font-size: 20px; font-weight: bold; text-align: center; line-height: 1.2; }
 
         .about-description {
             max-width: 1000px;
@@ -232,22 +172,6 @@
             line-height: 1.8;
         }
 
-        .learn-more-btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background-color: #E87352;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .learn-more-btn:hover {
-            background-color: #d5634a;
-        }
-
         /* Competitions Section */
         .competitions-section {
             padding: 80px 50px;
@@ -255,11 +179,7 @@
             text-align: center;
         }
 
-        .competitions-section h2 {
-            font-size: 56px;
-            font-weight: bold;
-            margin-bottom: 30px;
-        }
+        .competitions-section h2 { font-size: 56px; font-weight: bold; margin-bottom: 30px; }
 
         .competitions-description {
             max-width: 1000px;
@@ -282,25 +202,8 @@
             position: relative;
         }
 
-        .competition-image {
-            width: 120px;
-            height: 120px;
-            background-color: #ddd;
-            border-radius: 10px;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-
-        .competition-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .competition-info {
-            flex-grow: 1;
-            text-align: left;
-        }
+        /* Removed placeholder image block; card is text-only now */
+        .competition-info { flex-grow: 1; text-align: left; }
 
         .competition-date {
             display: inline-block;
@@ -312,16 +215,7 @@
             margin-bottom: 15px;
         }
 
-        .competition-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .competition-location {
-            font-size: 16px;
-            color: #666;
-        }
+        .competition-title { font-size: 20px; font-weight: bold; margin-bottom: 5px; }
 
         .details-btn {
             padding: 12px 30px;
@@ -332,11 +226,10 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+            text-decoration: none;
         }
 
-        .details-btn:hover {
-            background-color: #d5634a;
-        }
+        .details-btn:hover { background-color: #d5634a; }
 
         /* Contact Section */
         .contact-section {
@@ -345,38 +238,16 @@
             text-align: center;
         }
 
-        .contact-section h2 {
-            font-size: 56px;
-            font-weight: bold;
-            margin-bottom: 50px;
-        }
+        .contact-section h2 { font-size: 56px; font-weight: bold; margin-bottom: 50px; }
 
-        .contact-form {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .contact-form { max-width: 800px; margin: 0 auto; }
 
-        .form-row {
-            display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
+        .form-row { display: flex; gap: 20px; margin-bottom: 20px; }
 
-        .form-group {
-            flex: 1;
-            text-align: left;
-        }
+        .form-group { flex: 1; text-align: left; }
+        .form-group.full-width { width: 100%; }
 
-        .form-group.full-width {
-            width: 100%;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 16px;
-            color: #333;
-        }
+        .form-group label { display: block; margin-bottom: 8px; font-size: 16px; color: #333; }
 
         .form-group input,
         .form-group textarea {
@@ -389,10 +260,7 @@
             font-family: inherit;
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
 
         .submit-btn {
             padding: 15px 60px;
@@ -406,10 +274,7 @@
             transition: all 0.3s;
         }
 
-        .submit-btn:hover {
-            background-color: #333;
-            color: white;
-        }
+        .submit-btn:hover { background-color: #333; color: white; }
 
         /* Footer */
         footer {
@@ -431,38 +296,16 @@
             width: 90px;
             height: 90px;
             object-fit: contain;
+            border-radius: 10px;
         }
 
-        .footer-logo-text {
-            font-size: 32px;
-            font-weight: normal;
-            color: #666;
-        }
+        .footer-logo-text { font-size: 32px; font-weight: normal; color: #666; }
 
-        .footer-contact {
-            text-align: center;
-        }
+        .footer-contact, .footer-address { text-align: center; }
 
-        .footer-contact p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #333;
-        }
+        .footer-contact p, .footer-address p { margin: 5px 0; font-size: 14px; color: #333; }
 
-        .footer-address {
-            text-align: center;
-        }
-
-        .footer-address p {
-            margin: 5px 0;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .footer-links {
-            text-align: right;
-        }
-
+        .footer-links { text-align: right; }
         .footer-links a {
             display: block;
             margin: 5px 0;
@@ -470,18 +313,14 @@
             text-decoration: none;
             font-size: 14px;
         }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
+        .footer-links a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <div class="logo">
-                <img src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'">
-            </div>
+            <!-- Use your real path: e.g., images/dtech-logo.png -->
+            <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo">
             <div class="logo-text">D.Tech Math Club</div>
         </div>
         <nav>
@@ -527,7 +366,7 @@
         <div class="stats-container">
             <div class="stat-badge">
                 <div class="stat-number">5</div>
-                <div class="stat-label">Competions<br>Attended</div>
+                <div class="stat-label">Competitions<br>Attended</div>
             </div>
             <div class="stat-badge">
                 <div class="stat-number">45</div>
@@ -535,55 +374,45 @@
             </div>
             <div class="stat-badge">
                 <div class="stat-number">3</div>
-                <div class="stat-label">Competions<br>Hosted</div>
+                <div class="stat-label">Competitions<br>Hosted</div>
             </div>
         </div>
 
         <p class="about-description">
             The D.Tech Math Club is all about fostering a love for math through engaging activities, competitions, and collaborative projects. We host math competitions for middle schoolers, helping to empower the next generation of mathematicians and build a supportive community. Through these events, we not only develop our own skills but also inspire others to explore the wonders of numbers and problem-solving!
         </p>
-
-        <a href="#" class="learn-more-btn">Learn More</a>
+        <!-- Removed placeholder "Learn More" link -->
     </section>
 
     <section class="competitions-section" id="competitions">
         <h2>Competitions</h2>
         <p class="competitions-description">
-            Join us for exciting competitions that together talent and creativity! Our events are designed to challenge and showcase their skills in a fun and engaging. Whether you're a seasoned competitor or just starting out, there's something for everyone. Stay tuned for upcoming contests and get ready to put your abilities to the test!
+            Join us for exciting competitions that bring together talent and creativity! Our events are designed to challenge and showcase skills in a fun and engaging way. Whether you're a seasoned competitor or just starting out, there's something for everyone. Stay tuned for upcoming contests and get ready to put your abilities to the test!
         </p>
 
         <div class="competition-card">
-            <div class="competition-image">
-                <img src="puzzle-night-image.jpg" alt="Puzzle Night" onerror="this.style.display='none'">
-            </div>
             <div class="competition-info">
                 <span class="competition-date">🕐 39 days to the event</span>
                 <div class="competition-title">Fri, Dec 05</div>
                 <div class="competition-title">D.Tech Puzzle Night / Design Tech High School</div>
             </div>
-            <a href="puzzle-night.html" class="details-btn" style="text-decoration: none;">Details</a>
+            <a href="puzzle-night.html" class="details-btn">Details</a>
         </div>
 
         <div class="competition-card">
-            <div class="competition-image">
-                <img src="dtmt-image.jpg" alt="DTMT" onerror="this.style.display='none'">
-            </div>
             <div class="competition-info">
-                <div class="competition-title">Friday in March, date and time is TBD</div>
+                <div class="competition-title">Friday in March, date and time TBD</div>
                 <div class="competition-title">D.Tech Math Tournament (DTMT) / Design Tech High School</div>
             </div>
-            <button class="details-btn">Details</button>
+            <a href="dtmt.html" class="details-btn">Details</a>
         </div>
 
         <div class="competition-card">
-            <div class="competition-image">
-                <img src="dpotd-image.jpg" alt="D.PotD" onerror="this.style.display='none'">
-            </div>
             <div class="competition-info">
                 <div class="competition-title">Week in March before DTMT</div>
-                <div class="competition-title">D.Tech Problem of the Day Challenge (D.PotD) / Online in our website's D.PotD portal.</div>
+                <div class="competition-title">D.Tech Problem of the Day (D.PotD) / Online in our D.PotD portal</div>
             </div>
-            <button class="details-btn">Details</button>
+            <a href="dpotd.html" class="details-btn">Details</a>
         </div>
     </section>
 
@@ -632,8 +461,8 @@
 
     <footer>
         <div class="footer-logo">
-            <img src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <div class="logo" style="display: none;"></div>
+            <!-- Use your real path: e.g., images/dtech-logo.png -->
+            <img src="dtech-logo.png" alt="D.Tech Math Club Logo" class="logo-img">
             <div class="footer-logo-text">designtech<br><strong>MATH CLUB</strong></div>
         </div>
         <div class="footer-contact">
@@ -670,12 +499,10 @@
             };
 
             try {
-                const response = await fetch(SCRIPT_URL, {
+                await fetch(SCRIPT_URL, {
                     method: 'POST',
                     mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
                 
