@@ -88,22 +88,26 @@
                 <img src="aops-logo.png" alt="Art of Problem Solving Logo">
             </div>
 
-            <style>
+             <style>
                 .aops-logo {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                            /* robust centering */
+                    display: grid;
+                    place-items: center;
+                    width: 100%;
                     padding: 20px 0;
-                  /* optional: keep clean background */
+                    /* no background color */
                 }
 
                 .aops-logo img {
-                    height: 80px;              /* matches original placeholder height */
-                    width: 120px;
+                    height: 112px;        /* 1.4x bigger than 80px */
+                    width: auto;
+                    display: block;       /* avoid inline whitespace quirks */
+                    margin: 0 auto;       /* extra centering fallback */
                     object-fit: contain;
-                    border-radius: 10px;       /* keeps smooth corners */
+                    border-radius: 10px;  /* keep if you want rounded corners; remove if not */
                 }
             </style>
+
 
             <p>
                 Since its founding, AoPS has empowered countless students worldwide to explore mathematics beyond the classroom through innovative textbooks, online courses, and vibrant math communities. Their support helps our club provide engaging opportunities for D.Tech students to collaborate, compete, and grow as mathematical thinkers. Learn more at <a href="https://artofproblemsolving.com" style="color: #E87352;">https://artofproblemsolving.com</a> or <a href="#" style="color: #E87352;">here</a>.
