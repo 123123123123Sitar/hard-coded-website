@@ -98,9 +98,7 @@
       z-index: 10;
     }
 
-    .hero-logo {
-      margin-bottom: 20px;
-    }
+    .hero-logo { margin-bottom: 20px; }
 
     .hero-logo-img {
       display: block;
@@ -112,7 +110,7 @@
     }
 
     .hero-subtext {
-      font-size: 20px;
+      font-size: 18px; /* increased per your request */
       color: #333;
       margin-bottom: 30px;
     }
@@ -332,14 +330,13 @@
       gap: 15px;
     }
 
+    /* 2× bigger footer logo (90px → 180px) */
     .footer-logo img {
-      width: 90px;
-      height: 90px;
+      width: 180px;
+      height: 180px;
       object-fit: contain;
       border-radius: 10px;
     }
-
-    .footer-logo-text { font-size: 32px; font-weight: normal; color: #666; }
 
     .footer-contact, .footer-address { text-align: center; }
 
@@ -358,6 +355,11 @@
       font-size: 14px;
     }
     .footer-links a:hover { text-decoration: underline; }
+
+    /* Optional: keep footer image reasonable on very small screens */
+    @media (max-width: 480px) {
+      .footer-logo img { width: 140px; height: 140px; }
+    }
   </style>
 </head>
 <body>
@@ -388,7 +390,7 @@
     </div>
     <div class="hero-content">
       <div class="hero-logo">
-        <!-- Replace this with your image in the repo -->
+        <!-- Use your repo image here -->
         <img class="hero-logo-img" src="hero-logo.png" alt="D.Tech Hero Image">
       </div>
       <p class="hero-subtext">Members of the Mu Alpha Theta Honor Society</p>
@@ -446,7 +448,7 @@
         <div class="competition-title">Friday in March, date and time TBD</div>
         <div class="competition-title">D.Tech Math Tournament (DTMT) / Design Tech High School</div>
       </div>
-      <a href="dtmt.html" class="details-btn">Details</a>
+        <a href="dtmt.html" class="details-btn">Details</a>
     </div>
 
     <div class="competition-card">
@@ -503,8 +505,8 @@
 
   <footer>
     <div class="footer-logo">
-    <!-- Replace hero-logo.png with your actual file name/path in your repo -->
-      <img src="hero-logo.png" alt="D.Tech Math Club Logo" class="logo-img" />
+      <!-- Replacing the old logo+text with the hero logo, at 2× size -->
+      <img src="hero-logo.png" alt="D.Tech Math Club Logo" />
     </div>
     <div class="footer-contact">
       <p>dtechmathclub@gmail.com</p>
@@ -521,7 +523,6 @@
       <a href="#contact">Contact Us</a>
     </div>
   </footer>
-
 
   <script>
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzte7E8oFREonkzY9zPMYHFO_a_idFkuKAt6Qd16OB34xFnu8nPofhKVjkpq6I9-aja/exec';
