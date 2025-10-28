@@ -9,7 +9,7 @@
 
 :root {
     --primary-color: #E87352;
-    --primary-hover: #DA633E;
+    --primary-hover: #d5634a;
     --bg-light-gray: #e0e0e0;
     --bg-off-white: #f5f5f5;
     --bg-cream: #ede0d4;
@@ -25,6 +25,69 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-off-white);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    --bg-off-white: #1a1a1a;
+    --bg-light-gray: #2d2d2d;
+    --bg-cream: #252525;
+    --bg-peach: #3a3a3a;
+    --text-dark: #e0e0e0;
+    --text-black: #ffffff;
+    --border-gray: #444;
+    --border-light: #333;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode .competition-card,
+body.dark-mode .register-card {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .stat-badge {
+    background-color: #d5634a;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea,
+body.dark-mode .form-group select {
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border-color: #444;
+}
+
+body.dark-mode .modal-content {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .about-banner {
+    background: linear-gradient(to right, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+}
+
+body.dark-mode .competition-date,
+body.dark-mode .event-date {
+    background: #2d2d2d;
+    border-color: #555;
+}
+
+.dark-mode-toggle {
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--text-dark);
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: 10px;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--primary-color);
 }
 
 /* ===== HEADER & NAVIGATION ===== */
@@ -651,13 +714,10 @@ footer {
     line-height: 1.8;
     margin-bottom: 20px;
 }
+
 .aops-logo {
     max-width: 200px;
-    margin: 20px auto;          /* auto horizontally centers it */
-    display: flex;              /* ensures proper centering */
-    justify-content: center;    /* center horizontally */
-    align-items: center;        /* center vertically */
-    text-align: center;         /* extra safeguard for inline content */
+    margin: 20px 0;
 }
 
 .hidden-schedule {
