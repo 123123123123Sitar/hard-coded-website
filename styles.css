@@ -105,6 +105,14 @@ body.dark-mode .time-location p {
     color: #e0e0e0;
 }
 
+body.dark-mode .activities-section {
+    background-color: #2d2d2d;
+}
+
+body.dark-mode .activities-intro {
+    color: #e0e0e0;
+}
+
 /* ===============================
    GLOBAL LAYOUT ADJUSTMENTS
 =============================== */
