@@ -103,25 +103,25 @@
             margin: 0 auto 40px;
         }
 
-        .hero-image { 
-            background: none; 
-            justify-content: center;
-            align-items: center;/* drop the stripy bg */
+        .hero-image {
+            background: none;           /* remove stripy bg */
+            display: flex;              /* enable centering */
+            justify-content: center;    /* center horizontally */
+            align-items: center;        /* center vertically */
+            margin: 0 auto;             /* center the container itself */
         }
 
-        .hero-image::before { 
-            content: none;               /* kill the overlay entirely */
+        .hero-image::before {
+             content: none;              /* remove overlay */
         }
 
         .hero-image img {
-            width: 50%;
-            height: 50%;
-            object-fit: contain; 
-            justify-content: center;
-            align-items: center;/* keep aspect ratio inside 900×300 box */
+            max-width: 80%;             /* responsive width */
+            height: auto;               /* preserve aspect ratio */
             display: block;
-            background: none;
+            object-fit: contain;        /* fit nicely within the box */
         }
+
         /* Register Section */
         .register-section {
             padding: 60px 50px;
