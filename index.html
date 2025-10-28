@@ -624,44 +624,38 @@
     </footer>
 
     <script>
-        // Contact form submission handler
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw16v-4yozyNXVxyA52EL5YL5cGWM8eUw2AjFruEqxgc5R6CECWkvbMhDlI-4tI2JIyew/exec';
+
         document.getElementById('contactForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const formData = {
+                formType: 'contact',
+                timestamp: new Date().toISOString(),
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
                 email: document.getElementById('email').value,
                 school: document.getElementById('school').value,
                 position: document.getElementById('position').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
+                message: document.getElementById('message').value
             };
 
-            // IMPORTANT: You need to set up a backend service to handle this
-            // Options:
-            // 1. Google Apps Script with Google Sheets
-            // 2. Formspree.io
-            // 3. EmailJS
-            // 4. Your own backend server
-            
-            // Placeholder for backend integration
-            console.log('Form data:', formData);
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-            
-            // Example with Google Apps Script (you need to create this):
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbyrmxMYeShOgH7hbVX4cooLbG1noIJjyEH8eein2YL4Qz1Qx1FrrGAyIJJ1i-PeU7ZRjA/exec';
             try {
-                 const response = await fetch(scriptURL, {
-                     method: 'POST',
-                     body: JSON.stringify(formData)
-                 });
-                 alert('Thank you for your message!');
-                 this.reset();
-             } catch (error) {
-                 alert('Error submitting form. Please try again.');
-             }
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again or email us directly at dtechmathclub@gmail.com');
+            }
         });
     </script>
 </body>
