@@ -297,6 +297,12 @@
             content: '📍 ';
         }
 
+        .schedule-description {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
         .see-all-container {
             text-align: right;
             margin-top: 20px;
@@ -311,8 +317,6 @@
             font-size: 18px;
             cursor: pointer;
             transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
         }
 
         .see-all-btn:hover {
@@ -343,6 +347,64 @@
 
         .register-btn-bottom:hover {
             background-color: #d5634a;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #E87352;
+        }
+
+        .modal h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .modal p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.8;
         }
 
         /* Footer */
@@ -502,6 +564,7 @@
             <div class="schedule-details">
                 <div class="schedule-title">Check In</div>
                 <div class="schedule-location">In front of D.Tech</div>
+                <p class="schedule-description">Check in begins at 4:20. Please ensure that all students arrive at D.Tech and are signed in by 4:45.</p>
             </div>
         </div>
 
@@ -513,12 +576,62 @@
             <div class="schedule-details">
                 <div class="schedule-title">Welcome and Introduction</div>
                 <div class="schedule-location">Atrium</div>
+                <p class="schedule-description">Our club leadership gives a brief speech and we will introduce students to the various stations we offer.</p>
+            </div>
+        </div>
+
+        <div class="hidden-schedule" id="hiddenSchedule">
+            <div class="schedule-item">
+                <div class="schedule-time">
+                    <div class="schedule-time-range">5:00 PM - 6:15 PM</div>
+                    <div class="schedule-duration">1 hour 15 minutes</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-title">Exploration Stations</div>
+                    <div class="schedule-location">Atrium</div>
+                    <p class="schedule-description">Our puzzles stations will be open to student exploration. Students have the opportunity to choose which stations they want to visit, and can gain tickets from completing activities.</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-time">
+                    <div class="schedule-time-range">5:30 PM - 6:00 PM</div>
+                    <div class="schedule-duration">30 minutes</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-title">Countdown Round</div>
+                    <div class="schedule-location">Classroom</div>
+                    <p class="schedule-description">Students can participate in a Mathcounts-style Countdown Round for tickets.</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-time">
+                    <div class="schedule-time-range">6:00 PM - 6:01 PM</div>
+                    <div class="schedule-duration">1 minute</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-title">Snacks</div>
+                    <p class="schedule-description">We will distribute snacks and drinks to students.</p>
+                </div>
+            </div>
+
+            <div class="schedule-item">
+                <div class="schedule-time">
+                    <div class="schedule-time-range">6:15 PM - 6:30 PM</div>
+                    <div class="schedule-duration">15 minutes</div>
+                </div>
+                <div class="schedule-details">
+                    <div class="schedule-title">Raffle and Closing</div>
+                    <div class="schedule-location">Atrium</div>
+                    <p class="schedule-description">All students gather in the Atrium, and we draw tickets for raffle winners. Our club leadership gives a closing statement, and students are free to leave after.</p>
+                </div>
             </div>
         </div>
 
         <div class="see-all-container">
-            <p style="display: inline; margin-right: 20px; font-size: 16px;">4 more items available</p>
-            <a href="#" class="see-all-btn">See All</a>
+            <p style="display: inline; margin-right: 20px; font-size: 16px;" id="scheduleText">4 more items available</p>
+            <button class="see-all-btn" id="seeAllBtn">See All</button>
         </div>
 
         <a href="puzzle-night-register.html" class="register-btn-bottom">Register Now</a>
@@ -544,5 +657,65 @@
             <a href="index.html#contact">Contact Us</a>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <div id="eligibleModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('eligibleModal')">&times;</button>
+            <h2>Eligible Competitors</h2>
+            <p>The D.Tech Puzzle Night is only available to middle school students in the Bay Area. All students participating must be affiliated with a Bay Area middle school.</p>
+        </div>
+    </div>
+
+    <div id="cancellationModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('cancellationModal')">&times;</button>
+            <h2>Cancellation Policy</h2>
+            <p>The D.Tech Math Club deserves the right to cancel this event due to any unforseen circumstances. D.Tech Math Club must be notified of any cancellations through email at dtechmathclub@gmail.com.</p>
+        </div>
+    </div>
+
+    <div id="mediaModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('mediaModal')">&times;</button>
+            <h2>Media Consent</h2>
+            <p>By attending this event, participants and guardians consent to the capture and use of photographs and video recordings for promotional and educational purposes by the organizers. If you do not wish to be photographed or recorded, please notify organizers upon arrival. No compensation will be provided for the use of such media.</p>
+        </div>
+    </div>
+
+    <script>
+        // See All button toggle
+        document.getElementById('seeAllBtn').addEventListener('click', function() {
+            const hiddenSchedule = document.getElementById('hiddenSchedule');
+            const scheduleText = document.getElementById('scheduleText');
+            const btn = document.getElementById('seeAllBtn');
+            
+            if (hiddenSchedule.classList.contains('show')) {
+                hiddenSchedule.classList.remove('show');
+                scheduleText.textContent = '4 more items available';
+                btn.textContent = 'See All';
+            } else {
+                hiddenSchedule.classList.add('show');
+                scheduleText.textContent = 'Showing all items';
+                btn.textContent = 'Hide';
+            }
+        });
+
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('show');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('show');
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
