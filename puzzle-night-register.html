@@ -1,229 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register for D.Tech Puzzle Night</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>D.Tech Math Club - Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="logo" style="display: none;"></div>
-            <div class="logo-text">D.Tech Math Club</div>
-        </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="puzzle-night.html" class="active">Puzzle Night</a>
-            <a href="dpotd.html">d.PotD</a>
-            <a href="dtmt.html">DTMT</a>
-            <a href="team.html">Our Team</a>
-        </nav>
-    </header>
+  <header>
+    <div class="logo-container">
+      <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="logo" style="display: none;"></div>
+      <div class="logo-text">D.Tech Math Club</div>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="puzzle-night.html">Puzzle Night</a>
+      <a href="dpotd.html">d.PotD</a>
+      <a href="dtmt.html">DTMT</a>
+      <a href="team.html">Our Team</a>
+    </nav>
+  </header>
 
-    <section class="form-section">
-        <div class="form-container">
-            <div class="form-main">
-                <form id="registrationForm">
-                    <!-- Step 1: Add your details -->
-                    <div class="form-step">
-                        <h2 class="step-title">1. Add your details</h2>
+  <section class="hero">
+    <div class="puzzle-pieces">
+      <div class="puzzle-piece piece1"></div>
+      <div class="puzzle-piece piece2"></div>
+      <div class="puzzle-piece piece3"></div>
+      <div class="puzzle-piece piece4"></div>
+      <div class="puzzle-piece piece5"></div>
+      <div class="puzzle-piece piece6"></div>
+      <div class="puzzle-piece piece7"></div>
+      <div class="puzzle-piece piece8"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img class="hero-logo-img" src="hero-logo.png" alt="D.Tech Hero Image">
+      </div>
+      <p class="hero-subtext">Members of the Mu Alpha Theta Honor Society</p>
+      <div class="hero-welcome">
+        <strong>Welcome to the D.Tech Math Club!</strong><br>
+        Join us as we inspire each other and<br>
+        deepen our love for math through<br>
+        attending and hosting competitions!
+      </div>
+      <a href="puzzle-night.html#competitions" class="register-btn">Register for Puzzle Night! ›</a>
+    </div>
+  </section>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="studentFirstName">*Student first name</label>
-                                <input type="text" id="studentFirstName" name="studentFirstName" placeholder="Sitar" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="studentLastName">*Student last name</label>
-                                <input type="text" id="studentLastName" name="studentLastName" placeholder="Eswar" required>
-                            </div>
-                        </div>
+  <section class="about-section" id="about">
+    <h2>About Us</h2>
+    <p class="subtitle">Empowering Students Through Collaborative Learning in Math</p>
 
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <label for="parentEmail">*Parent Email</label>
-                                <input type="email" id="parentEmail" name="parentEmail" placeholder="sitareswar@gmail.com" required>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <label for="parentPhone">Parent Phone Number</label>
-                                <input type="tel" id="parentPhone" name="parentPhone">
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <label for="school">*School</label>
-                                <input type="text" id="school" name="school" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group full-width">
-                            <label>*What grade is your student in?</label>
-                            <div class="radio-group">
-                                <div class="radio-option">
-                                    <input type="radio" id="grade6" name="grade" value="6" required>
-                                    <label for="grade6">6th</label>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="grade7" name="grade" value="7">
-                                    <label for="grade7">7th</label>
-                                </div>
-                                <div class="radio-option">
-                                    <input type="radio" id="grade8" name="grade" value="8">
-                                    <label for="grade8">8th</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <label for="dietaryRestrictions">Does your student have any dietary restrictions?</label>
-                                <textarea id="dietaryRestrictions" name="dietaryRestrictions"></textarea>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="form-group full-width">
-                                <label for="comments">Questions or Comments?</label>
-                                <textarea id="comments" name="comments"></textarea>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Step 2: Event Policies -->
-                    <div class="form-step">
-                        <h2 class="step-title">2. Event Policies</h2>
-
-                        <p style="font-size: 16px; margin-bottom: 20px; color: #333;">
-                            Please indicate that you've read and agree to the event's policies.
-                        </p>
-
-                        <div class="checkbox-group">
-                            <div class="checkbox-option">
-                                <input type="checkbox" id="agreePolicies" name="agreePolicies" required>
-                                <label for="agreePolicies">
-                                    I agree to: <a onclick="openModal('eligibleModal')">Eligible Competitors</a>, <a onclick="openModal('cancellationModal')">Cancellation Policy</a>, <a onclick="openModal('mediaModal')">Media Consent</a>
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="next-btn">Submit</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="form-sidebar">
-                <h3>D.Tech Puzzle Night</h3>
-                <p><strong>Dec 05, 2025, 4:30 PM – 6:30 PM</strong></p>
-                <p>Design Tech High School</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-logo">
-            <img src="hero-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="logo" style="display: none;"></div>
-        </div>
-        <div class="footer-contact">
-            <p>dtechmathclub@gmail.com</p>
-            <p>designtechhighschool.org</p>
-        </div>
-        <div class="footer-address">
-            <p>275 Oracle Pkwy,</p>
-            <p>Redwood City, CA</p>
-            <p>94065, USA</p>
-        </div>
-        <div class="footer-links">
-            <a href="puzzle-night.html">Competitions</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact Us</a>
-        </div>
-    </footer>
-
-    <!-- Modals -->
-    <div id="eligibleModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('eligibleModal')">&times;</button>
-            <h2>Eligible Competitors</h2>
-            <p>The D.Tech Puzzle Night is only available to middle school students in the Bay Area. All students participating must be affiliated with a Bay Area middle school.</p>
-        </div>
+    <div class="stats-container">
+      <div class="stat-badge"><div class="stat-number">5</div><div class="stat-label">Competitions<br>Attended</div></div>
+      <div class="stat-badge"><div class="stat-number">45</div><div class="stat-label">Members</div></div>
+      <div class="stat-badge"><div class="stat-number">3</div><div class="stat-label">Competitions<br>Hosted</div></div>
     </div>
 
-    <div id="cancellationModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('cancellationModal')">&times;</button>
-            <h2>Cancellation Policy</h2>
-            <p>The D.Tech Math Club deserves the right to cancel this event due to any unforseen circumstances. D.Tech Math Club must be notified of any cancellations through email at dtechmathclub@gmail.com.</p>
-        </div>
+    <p class="about-description">
+      The D.Tech Math Club is all about fostering a love for math through engaging activities, competitions, and collaborative projects. We host math competitions for middle schoolers, helping to empower the next generation of mathematicians and build a supportive community. Through these events, we not only develop our own skills but also inspire others to explore the wonders of numbers and problem-solving!
+    </p>
+  </section>
+
+  <section class="competitions-section" id="competitions">
+    <h2>Competitions</h2>
+    <p class="competitions-description">
+      Join us for exciting competitions that bring together talent and creativity! Our events are designed to challenge and showcase skills in a fun and engaging way. Whether you're a seasoned competitor or just starting out, there's something for everyone.
+    </p>
+
+    <div class="competition-card">
+      <div class="competition-info">
+        <span class="competition-date">🕐 39 days to the event</span>
+        <div class="competition-title">Fri, Dec 05</div>
+        <div class="competition-title">D.Tech Puzzle Night / Design Tech High School</div>
+      </div>
+      <a href="puzzle-night-details.html" class="details-btn">Details</a>
     </div>
 
-    <div id="mediaModal" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('mediaModal')">&times;</button>
-            <h2>Media Consent</h2>
-            <p>By attending this event, participants and guardians consent to the capture and use of photographs and video recordings for promotional and educational purposes by the organizers. If you do not wish to be photographed or recorded, please notify organizers upon arrival. No compensation will be provided for the use of such media.</p>
-        </div>
+    <div class="competition-card">
+      <div class="competition-info">
+        <div class="competition-title">Friday in March, TBD</div>
+        <div class="competition-title">D.Tech Math Tournament (DTMT)</div>
+      </div>
+      <a href="dtmt.html" class="details-btn">Details</a>
     </div>
 
-    <script>
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzte7E8oFREonkzY9zPMYHFO_a_idFkuKAt6Qd16OB34xFnu8nPofhKVjkpq6I9-aja/exec';
+    <div class="competition-card">
+      <div class="competition-info">
+        <div class="competition-title">Week in March before DTMT</div>
+        <div class="competition-title">D.Tech Problem of the Day (D.PotD)</div>
+      </div>
+      <a href="dpotd.html" class="details-btn">Details</a>
+    </div>
+  </section>
 
-        // Modal functions
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.add('show');
-        }
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group"><label for="firstName">First name *</label><input type="text" id="firstName" required></div>
+        <div class="form-group"><label for="lastName">Last name *</label><input type="text" id="lastName" required></div>
+      </div>
+      <div class="form-row"><div class="form-group full-width"><label for="email">Email *</label><input type="email" id="email" required></div></div>
+      <div class="form-row">
+        <div class="form-group"><label for="school">School/Organization *</label><input type="text" id="school" required></div>
+        <div class="form-group"><label for="position">Position</label><input type="text" id="position"></div>
+      </div>
+      <div class="form-row"><div class="form-group full-width"><label for="message">Message *</label><textarea id="message" required></textarea></div></div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </section>
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('show');
-        }
+  <footer>
+    <div class="footer-logo">
+      <img src="hero-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none';">
+    </div>
+    <div class="footer-contact">
+      <p>dtechmathclub@gmail.com</p>
+      <p>designtechhighschool.org</p>
+    </div>
+    <div class="footer-address">
+      <p>275 Oracle Pkwy,</p><p>Redwood City, CA</p><p>94065, USA</p>
+    </div>
+    <div class="footer-links">
+      <a href="#competitions">Competitions</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
 
-        // Close modal when clicking outside
-        window.addEventListener('click', function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.classList.remove('show');
-            }
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzte7E8oFREonkzY9zPMYHFO_a_idFkuKAt6Qd16OB34xFnu8nPofhKVjkpq6I9-aja/exec';
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
+      const formData = {
+        formType: 'contact',
+        timestamp: new Date().toISOString(),
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        school: document.getElementById('school').value,
+        position: document.getElementById('position').value,
+        message: document.getElementById('message').value
+      };
+      try {
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
         });
-
-        document.getElementById('registrationForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                formType: 'puzzle-night',
-                timestamp: new Date().toISOString(),
-                studentFirstName: document.getElementById('studentFirstName').value,
-                studentLastName: document.getElementById('studentLastName').value,
-                parentEmail: document.getElementById('parentEmail').value,
-                parentPhone: document.getElementById('parentPhone').value,
-                school: document.getElementById('school').value,
-                grade: document.querySelector('input[name="grade"]:checked').value,
-                dietaryRestrictions: document.getElementById('dietaryRestrictions').value,
-                comments: document.getElementById('comments').value,
-                agreePolicies: document.getElementById('agreePolicies').checked
-            };
-
-            try {
-                const response = await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                alert('Thank you for registering! You will receive a confirmation email soon.');
-                this.reset();
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error submitting the registration. Please try again or email us directly at dtechmathclub@gmail.com');
-            }
-        });
-    </script>
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+        
+        // Re-enable button after successful submission
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error submitting the form. Please try again or email us directly at dtechmathclub@gmail.com');
+        
+        // Re-enable button on error
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  </script>
 </body>
 </html>
