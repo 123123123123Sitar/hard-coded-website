@@ -89,6 +89,14 @@ body.dark-mode .event-card {
     color: #e0e0e0 !important;
 }
 
+body.dark-mode .hero-section {
+    background: #1a1a1a;
+}
+
+body.dark-mode .hero-section h1 {
+    color: #e0e0e0;
+}
+
 /* ===============================
    GLOBAL LAYOUT ADJUSTMENTS
 =============================== */
