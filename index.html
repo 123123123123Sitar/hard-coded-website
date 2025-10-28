@@ -19,6 +19,7 @@
       <a href="dpotd.html">d.PotD</a>
       <a href="dtmt.html">DTMT</a>
       <a href="team.html">Our Team</a>
+      <button class="dark-mode-toggle" id="darkModeToggle">🌙</button>
     </nav>
   </header>
 
@@ -131,6 +132,29 @@
   </footer>
 
   <script>
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️';
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            darkModeToggle.textContent = '☀️';
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeToggle.textContent = '🌙';
+            localStorage.setItem('darkMode', null);
+        }
+    });
+
+    // Contact form submission
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzte7E8oFREonkzY9zPMYHFO_a_idFkuKAt6Qd16OB34xFnu8nPofhKVjkpq6I9-aja/exec';
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
