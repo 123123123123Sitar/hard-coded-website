@@ -651,10 +651,13 @@ footer {
     line-height: 1.8;
     margin-bottom: 20px;
 }
-
 .aops-logo {
     max-width: 200px;
-    margin: 20px 0;
+    margin: 20px auto;          /* auto horizontally centers it */
+    display: flex;              /* ensures proper centering */
+    justify-content: center;    /* center horizontally */
+    align-items: center;        /* center vertically */
+    text-align: center;         /* extra safeguard for inline content */
 }
 
 .hidden-schedule {
