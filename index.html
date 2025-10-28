@@ -134,6 +134,14 @@
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzte7E8oFREonkzY9zPMYHFO_a_idFkuKAt6Qd16OB34xFnu8nPofhKVjkpq6I9-aja/exec';
     document.getElementById('contactForm').addEventListener('submit', async function (e) {
       e.preventDefault();
+      
+      const submitBtn = this.querySelector('.submit-btn');
+      const originalText = submitBtn.textContent;
+      
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      
       const formData = {
         formType: 'contact',
         timestamp: new Date().toISOString(),
@@ -153,9 +161,17 @@
         });
         alert('Thank you for your message! We will get back to you soon.');
         this.reset();
+        
+        // Re-enable button after successful submission
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
       } catch (error) {
         console.error('Error:', error);
         alert('There was an error submitting the form. Please try again or email us directly at dtechmathclub@gmail.com');
+        
+        // Re-enable button on error
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
       }
     });
   </script>
