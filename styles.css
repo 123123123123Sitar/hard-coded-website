@@ -74,26 +74,31 @@ body.dark-mode .event-date {
     border-color: #555;
 }
 
-.dark-mode-toggle {
-    padding: 10px 15px;
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--text-dark);
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s;
-    margin-left: 10px;
+/* ===============================
+   GLOBAL LAYOUT ADJUSTMENTS
+=============================== */
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 24px;
 }
 
-.dark-mode-toggle:hover {
-    background-color: var(--primary-color);
+section {
+  margin-bottom: 60px;
+}
+
+.hero-section p,
+.register-section p {
+  max-width: 750px;
+  margin: 0 auto 25px auto;
+  text-align: justify;
+  line-height: 1.8;
 }
 
 /* ===== HEADER & NAVIGATION ===== */
 header {
     background-color: var(--bg-light-gray);
-    padding: 20px 50px;
+    padding: 18px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -144,7 +149,8 @@ header {
 
 nav {
     display: flex;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
 }
 
 nav a {
@@ -160,6 +166,28 @@ nav a {
 nav a:hover,
 nav a.active {
     background-color: var(--primary-hover);
+}
+
+.dark-mode-toggle {
+    padding: 10px 15px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--text-dark);
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark-mode .dark-mode-toggle {
+    border-color: var(--primary-color);
+    color: #fff;
+    background-color: transparent;
 }
 
 /* ===== HERO SECTIONS ===== */
@@ -228,6 +256,17 @@ nav a.active {
     color: var(--text-dark);
     line-height: 1.6;
     margin-bottom: 25px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.hero-image img {
+    max-width: 70%;
+    height: auto;
 }
 
 /* ===== SECTIONS ===== */
@@ -364,8 +403,7 @@ h2 {
     line-height: 1.2;
 }
 
-.competition-card,
-.register-card {
+.competition-card {
     background-color: var(--bg-off-white);
     border: 2px solid var(--primary-color);
     border-radius: 10px;
@@ -376,6 +414,21 @@ h2 {
     align-items: center;
     gap: 30px;
     position: relative;
+}
+
+.register-card {
+    background-color: var(--bg-off-white);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .competition-date,
@@ -881,21 +934,6 @@ footer {
     background-color: var(--primary-hover);
 }
 
-.hero-image {
-    background: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-}
-
-.hero-image img {
-    max-width: 80%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     header {
@@ -957,6 +995,17 @@ footer {
 
     .footer-links {
         text-align: center;
+    }
+
+    .page-content {
+        padding: 40px 20px;
+        max-width: 100%;
+    }
+
+    .hero-section p,
+    .register-section p {
+        max-width: 100%;
+        text-align: left;
     }
 }
 
