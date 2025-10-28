@@ -53,6 +53,13 @@
             transform: translate(-50%, -50%);
         }
 
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
         .logo-text {
             font-size: 48px;
             font-weight: bold;
@@ -281,6 +288,13 @@
             background-color: #ddd;
             border-radius: 10px;
             flex-shrink: 0;
+            overflow: hidden;
+        }
+
+        .competition-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .competition-info {
@@ -413,6 +427,12 @@
             gap: 15px;
         }
 
+        .footer-logo img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+        }
+
         .footer-logo-text {
             font-size: 32px;
             font-weight: normal;
@@ -459,7 +479,9 @@
 <body>
     <header>
         <div class="logo-container">
-            <div class="logo"></div>
+            <div class="logo">
+                <img src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'">
+            </div>
             <div class="logo-text">D.Tech Math Club</div>
         </div>
         <nav>
@@ -531,7 +553,9 @@
         </p>
 
         <div class="competition-card">
-            <div class="competition-image"></div>
+            <div class="competition-image">
+                <img src="puzzle-night-image.jpg" alt="Puzzle Night" onerror="this.style.display='none'">
+            </div>
             <div class="competition-info">
                 <span class="competition-date">🕐 39 days to the event</span>
                 <div class="competition-title">Fri, Dec 05</div>
@@ -541,7 +565,9 @@
         </div>
 
         <div class="competition-card">
-            <div class="competition-image"></div>
+            <div class="competition-image">
+                <img src="dtmt-image.jpg" alt="DTMT" onerror="this.style.display='none'">
+            </div>
             <div class="competition-info">
                 <div class="competition-title">Friday in March, date and time is TBD</div>
                 <div class="competition-title">D.Tech Math Tournament (DTMT) / Design Tech High School</div>
@@ -550,7 +576,9 @@
         </div>
 
         <div class="competition-card">
-            <div class="competition-image"></div>
+            <div class="competition-image">
+                <img src="dpotd-image.jpg" alt="D.PotD" onerror="this.style.display='none'">
+            </div>
             <div class="competition-info">
                 <div class="competition-title">Week in March before DTMT</div>
                 <div class="competition-title">D.Tech Problem of the Day Challenge (D.PotD) / Online in our website's D.PotD portal.</div>
@@ -604,7 +632,8 @@
 
     <footer>
         <div class="footer-logo">
-            <div class="logo"></div>
+            <img src="dtech-logo.png" alt="D.Tech Math Club Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div class="logo" style="display: none;"></div>
             <div class="footer-logo-text">designtech<br><strong>MATH CLUB</strong></div>
         </div>
         <div class="footer-contact">
