@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - D.Tech Math Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .team-hero {
+            text-align: center;
+            padding: 60px 50px 40px;
+            background-color: var(--bg-off-white);
+        }
+
+        .team-hero h1 {
+            font-size: 64px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .building-image {
+            max-width: 900px;
+            margin: 0 auto 60px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .building-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .what-we-do-section {
+            padding: 60px 50px;
+            background-color: var(--bg-off-white);
+        }
+
+        .what-we-do-section h2 {
+            text-align: center;
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .what-we-do-section h2::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+        }
+
+        .what-we-do-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        .side-images {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .side-images img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .what-we-do-text {
+            padding-top: 0;
+        }
+
+        .what-we-do-text h3 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+
+        .what-we-do-text h3:first-child {
+            margin-top: 0;
+        }
+
+        .what-we-do-text p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .what-we-do-text ul {
+            margin: 15px 0 25px 20px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .what-we-do-text ul li {
+            margin-bottom: 10px;
+        }
+
+        .leadership-section {
+            padding: 60px 50px;
+            background-color: var(--bg-light-gray);
+            text-align: center;
+        }
+
+        .leadership-section h2 {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .leadership-section h2::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 30px;
+        }
+
+        .leadership-intro {
+            max-width: 900px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+
+        .leadership-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: var(--primary-color);
+            padding: 50px;
+            border-radius: 15px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .leader-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .leader-photo {
+            width: 100%;
+            height: 350px;
+            background-color: #ddd;
+            overflow: hidden;
+        }
+
+        .leader-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .leader-info {
+            padding: 25px 20px;
+            text-align: left;
+        }
+
+        .leader-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-black);
+        }
+
+        .leader-title {
+            font-size: 16px;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+
+        .sponsors-section {
+            padding: 60px 50px;
+            background-color: var(--primary-color);
+            text-align: center;
+            color: var(--text-black);
+        }
+
+        .sponsors-section h2 {
+            font-size: 56px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .sponsors-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+        }
+
+        .sponsors-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .sponsor-logo {
+            margin: 40px 0;
+        }
+
+        .sponsor-logo img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        @media (max-width: 1024px) {
+            .what-we-do-content {
+                grid-template-columns: 1fr;
+            }
+
+            .side-images {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .leadership-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-hero h1 {
+                font-size: 40px;
+            }
+
+            .what-we-do-section h2,
+            .leadership-section h2,
+            .sponsors-section h2 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="logo" style="display:none;"></div>
+            <div class="logo-text">D.Tech Math Club</div>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="puzzle-night.html">Puzzle Night</a>
+            <a href="dpotd.html">d.PotD</a>
+            <a href="dtmt.html">DTMT</a>
+            <a href="team.html" class="active">Our Team</a>
+            <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="team-hero">
+            <h1>About D.Tech Math Club</h1>
+            <p style="max-width: 900px; margin: 0 auto 40px; font-size: 18px; line-height: 1.8;">
+                Welcome to the D.Tech Math Club! We're a community of math enthusiasts who come together to explore the beauty of mathematics. Whether it's through engaging competitions, problem-solving, or collaborative projects, we strive to inspire and empower the math community. Our club welcomes students who are passionate about math, providing an environment where they can enhance their skills and build lasting friendships.
+            </p>
+        </section>
+
+        <div class="building-image">
+            <img src="dtech-building.jpg" alt="Design Tech High School Building" onerror="this.style.display='none';">
+        </div>
+
+        <section class="what-we-do-section">
+            <h2>What We Do</h2>
+            <div class="what-we-do-content">
+                <div class="side-images">
+                    <img src="team-photo-1.jpg" alt="Math Club Activity" onerror="this.style.background='#ddd';">
+                    <img src="team-photo-2.jpg" alt="Math Club Meeting" onerror="this.style.background='#ddd';">
+                    <img src="team-photo-3.jpg" alt="Math Club Competition" onerror="this.style.background='#ddd';">
+                </div>
+                <div class="what-we-do-text">
+                    <h3>Our Mission</h3>
+                    <p>
+                        Our mission is to foster a love for mathematics and help members develop their problem-solving abilities. We are dedicated to empowering young mathematicians, encouraging critical thinking, and creating opportunities for students to grow in their mathematical journey. By hosting and participating in math competitions, we aim to inspire confidence in students while building a supportive math community around us.
+                    </p>
+
+                    <h3>Our Club Meetings</h3>
+                    <p>
+                        D.Tech Math Club meets weekly during Flex period on Mondays. During these meetings, members come together to share ideas, collaborate, and learn from one another. Guided by our club mentors, Ms Dy and Mx Atkinson, advanced math teachers at D.Tech, we sharpen our mathematical thinking through team problem-solving. In preparation for math competitions, we practice with past problems, sharing our solutions with teammates. We also plan and prepare for our club events and competitions to deliver the best experience for all participants. Join us to connect, grow, and share the joy of math!
+                    </p>
+
+                    <h3>Competitions We Participate In</h3>
+                    <p>
+                        We regularly participate in well-known competitions like the BMT, SMT, AMC, and BAMO. These competitions provide our members with the opportunity to challenge themselves, meet like-minded individuals, and represent D.Tech in prestigious math events.
+                    </p>
+                    <ul>
+                        <li><strong>Berkeley Math Tournament (BMT):</strong> An elite, student-organized competition that gathers top math students from across the nation to tackle intricate individual and team problems across multiple topics.</li>
+                        <li><strong>Stanford Math Tournament (SMT):</strong> A prestigious regional competition hosted by Stanford University, designed to challenge high school students with unique, thought-provoking problems that emphasize mathematical creativity, depth, and intuition.</li>
+                        <li><strong>American Mathematics Competition (AMC):</strong> A nationwide competition that challenges students with advanced math problems in the AMC 10 and AMC 12 and offers the chance to qualify for higher-level contests, including AIME, USAJMO, and USAMO.</li>
+                        <li><strong>Bay Area Math Olympiad (BAMO):</strong> A proof-based math competition that attracts top students from the Bay Area and beyond. BAMO emphasizes mathematical reasoning and problem-solving, mirroring the style of national and international math olympiads.</li>
+                    </ul>
+
+                    <h3>Competitions We Host</h3>
+                    <p>
+                        <strong>Puzzle Night</strong> (December): A fun and challenging event for middle school students in the Bay Area, where they can test their logical thinking and problem-solving skills.
+                    </p>
+                    <p>
+                        <strong>Math Tournament</strong> (March): An exciting math competition for middle schoolers across the Bay Area, designed to inspire young minds and foster a competitive yet collaborative spirit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="leadership-section">
+            <h2>Club Leadership</h2>
+            <p class="leadership-intro">
+                The leadership of our club is essential in the operations of our club. The president and vice president work together, coordinating various activities, while the president of competitions is responsible for organizing and promoting our events and competitions to maximize participation. Our social media manager ensures that both members and the public stay informed and engaged with our club activities. Together, they create a lively atmosphere that encourages growth and connection among our members.
+            </p>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-photo">
+                        <img src="kai-photo.jpg" alt="Kai Lidzborski" onerror="this.style.display='none';">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Kai Lidzborski</div>
+                        <div class="leader-title">President</div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-photo">
+                        <img src="sitar-photo.jpg" alt="Sitar Eswar" onerror="this.style.display='none';">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Sitar Eswar</div>
+                        <div class="leader-title">Vice President<br>Director of Competitions</div>
+                    </div>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-photo">
+                        <img src="siddhi-photo.jpg" alt="Siddhi Prassad" onerror="this.style.display='none';">
+                    </div>
+                    <div class="leader-info">
+                        <div class="leader-name">Siddhi Prassad</div>
+                        <div class="leader-title">Vice President</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsors-section">
+            <h2>Our Sponsors</h2>
+            <div class="sponsors-content">
+                <p>
+                    We would like to thank our sponsors for supporting the D.Tech Math Club. Their contributions make it possible for us to host our annual competitions and attend various math tournaments. We're deeply grateful for our sponsors' commitment to fostering curiosity, collaboration, and a love for mathematics in our community.
+                </p>
+                <div class="sponsor-logo">
+                    <img src="aops-logo.png" alt="Art of Problem Solving">
+                </div>
+                <p>
+                    The Art of Problem Solving (AoPS) is a a leading organization dedicated to fostering problem-solving excellence and a lifelong passion for mathematics. Since its founding, AoPS has empowered countless students worldwide to explore mathematics beyond the classroom through innovative textbooks, online courses, and vibrant math communities. Learn more at their <a href="https://artofproblemsolving.com" style="color: #E87352; font-weight: bold;">website</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="hero-logo.png" alt="D.Tech Math Club Logo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="logo" style="display:none;"></div>
+        </div>
+        <div class="footer-contact">
+            <p>dtechmathclub@gmail.com</p>
+            <p>designtechhighschool.org</p>
+        </div>
+        <div class="footer-address">
+            <p>275 Oracle Pkwy,</p>
+            <p>Redwood City, CA</p>
+            <p>94065, USA</p>
+        </div>
+        <div class="footer-links">
+            <a href="index.html#competitions">Competitions</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            body.classList.add('dark-mode');
+            darkModeToggle.textContent = '☀️';
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                darkModeToggle.textContent = '☀️';
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkModeToggle.textContent = '🌙';
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    </script>
+</body>
+</html>
