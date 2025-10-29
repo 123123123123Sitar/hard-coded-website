@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D.Tech Math Tournament</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero-section { 
+      margin-bottom: 8px;
+      padding-bottom: 0;
+    }
+    .hero-section > *:last-child {
+      margin-bottom: 0;
+    }
+    .register-section {
+      margin-top: 8px;
+    }
+    .register-section h2 {
+      margin-top: 0;
+    }
+    .dtmt-logo-banner {
+      display: flex;
+      justify-content: center;
+      margin: 40px auto;
+    }
+    .dtmt-logo-banner img {
+      max-width: 70%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img class="logo-img" src="dtech-logo.png" alt="D.Tech Math Club Logo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+      <div class="logo" style="display:none;"></div>
+      <div class="logo-text">D.Tech Math Club</div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="puzzle-night.html">Puzzle Night</a>
+      <a href="dpotd.html">d.PotD</a>
+      <a href="dtmt.html" class="active">DTMT</a>
+      <a href="team.html">Our Team</a>
+      <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+  </header>
+
+  <main class="page-content">
+    <section class="hero-section">
+      <h1>Design Tech Math Tournament</h1>
+      <p>
+        The D.Tech Math Club is hosting our biggest competition of the year, the <strong>Design Tech Math Tournament (DTMT)</strong>, in <strong>early March</strong>. This is a competitive yet welcoming event for middle school students in the Bay Area. Competitors face a variety of creative individual and team problems in algebra, geometry, number theory, probability, and combinatorics that reward clever thinking and careful work. Modeled on established contests such as Mathcounts and the AMC 8/10, the tournament gives students a chance to test their skills, learn new strategies, and meet other like-minded students!
+      </p>
+    </section>
+
+    <div class="dtmt-logo-banner">
+      <img src="dtmt-logo.png" alt="DTMT Logo">
+    </div>
+
+    <section class="register-section">
+      <h2>2026 DTMT Date and Time TBD</h2>
+      <p style="max-width: 750px; margin: 0 auto 25px;">
+        More details will be released soon. Check back for updates!
+      </p>
+      
+      <div class="register-card">
+        <div class="register-image">
+          <img src="dtmt-icon.png" alt="DTMT icon" onerror="this.parentElement.style.background='#ddd';">
+        </div>
+        <div class="register-info">
+          <div class="event-title">Friday in March, date and time is TBD</div>
+          <div class="event-title">
+            D.Tech Math Tournament (DTMT) / Design Tech High School
+          </div>
+        </div>
+        <a href="dtmt-details.html" class="details-btn">Details</a>
+      </div>
+    </section>
+
+    <section class="about-section" style="background-color: var(--bg-peach); padding: 60px 50px;">
+      <h2>2025 DTMT Problems and Solutions</h2>
+      <div style="max-width: 850px; margin: 0 auto;">
+        <p class="about-description">
+          Last year's D.Tech Math Tournament featured an individual round and a team round. Take a look back at some of our past Math Nights, where students tackled individual challenges, worked through team rounds, and explored creative solutions together. Join the D.Tech Math Club in celebrating the fun side of problem solving! Check out the PDFs below to view the problems.
+        </p>
+        
+        <div style="margin-top: 30px;">
+          <p style="font-size: 18px; margin-bottom: 10px;"><strong>Individual Round:</strong> <a href="#" style="color: #E87352;">Problems</a> | <a href="#" style="color: #E87352;">Solutions</a></p>
+          <p style="font-size: 18px;"><strong>Team Round:</strong> <a href="#" style="color: #E87352;">Problems</a> | <a href="#" style="color: #E87352;">Solutions</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo">
+      <img src="hero-logo.png" alt="D.Tech Math Club Logo"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+      <div class="logo" style="display:none;"></div>
+    </div>
+    <div class="footer-contact">
+      <p>dtechmathclub@gmail.com</p>
+      <p>designtechhighschool.org</p>
+    </div>
+    <div class="footer-address">
+      <p>275 Oracle Pkwy,</p>
+      <p>Redwood City, CA</p>
+      <p>94065, USA</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#competitions">Competitions</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        body.classList.add('dark-mode');
+        darkModeToggle.textContent = '☀️';
+    }
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+            darkModeToggle.textContent = '☀️';
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeToggle.textContent = '🌙';
+            localStorage.setItem('darkMode', null);
+        }
+    });
+  </script>
+</body>
+</html>
